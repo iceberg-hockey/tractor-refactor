@@ -1,0 +1,84 @@
+span{
+    position: absolute;
+    font-size: 40px;
+    color: #fff;
+    z-index: 100000;
+    text-shadow: 20px 20px 6px rgba(0, 0, 0, 1);
+    font-weight: 900;
+}
+
+.west{
+    left: 30px;
+    top: 30px;
+}
+
+.north{
+    right: 30px;
+    top: 30px;
+}
+
+.south{
+    left: 30px;
+    bottom: 30px;
+}
+
+.east{
+    right: 30px;
+    bottom: 30px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game{
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+.filter {
+    background-image: url(./img/slow-water.gif);
+    background-repeat: repeat;
+    background-size: 80px 80px;
+    position: absolute;
+    z-index: 1;
+    width: 700px;
+    height: 700px;
+    filter: hue-rotate(-90deg) grayscale(0.5);
+}
+
+img {
+    position: absolute;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.field {
+    width: 480px;
+    height: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 100;
+    position: absolute;
+    transform: translate(100px, 100px) rotate(45deg);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    background-image: url(./img/grass-1.png);
+}
+
+.field div:nth-child(12n+1),
+.field div:nth-child(12n+3),
+.field div:nth-child(12n+5),
+.field div:nth-child(12n+8),
+.field div:nth-child(12n+10),
+.field div:nth-child(12n+12) {
+    background-image: url(./img/grass-2.png);
+}

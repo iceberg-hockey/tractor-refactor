@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "lr-http-server -p 3011 -l 3012"
+  },
+  "dependencies": {
+    "lr-http-server": "^0.1.5"
+  }
+}
